@@ -1,0 +1,12 @@
+<form class="form" (submit)="handleOnSubmit()">
+  <p *ngIf="alert !== ''" class="alert">{{alert}}</p>
+  <div class="wrapperInput">
+    <label for="description" class="label">Descripción del gasto:</label>
+    <input type="text" class="input" placeholder="Ejemplo: Cumpleaños" [(ngModel)]="bill.description" name="description" id="description" required="true" maxlength="21">
+  </div>
+  <div class="wrapperInput">
+    <label for="gasto" class="label" placeholder="500">Gasto en pesos $:</label>
+    <input type="number" class="input" [(ngModel)]="bill.price" placeholder="500" name="price" id="gasto" required >
+  </div>
+  <button class="actionButton">Guardar.</button>
+</form>

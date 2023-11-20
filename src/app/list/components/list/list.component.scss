@@ -1,0 +1,87 @@
+.wrapperList {
+  font-family: "Nunito Sans", sans-serif;
+  @media (min-width: 481px) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  @media (min-width: 769px) {
+    height: 80vh;
+    overflow-y: scroll;
+  }
+  .title {
+    font-family: "Vina Sans", sans-serif;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    color: #2d9596;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+  .list {
+    width: 100%;
+    color: #000000;
+    padding: 1rem 0;
+    .index {
+      font-weight: 200;
+      margin-right: 0.5rem;
+    }
+    .listItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      .wrapperData {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        .descr {
+          font-size: 1rem;
+          font-weight: 400;
+          margin: 0;
+          padding: 0;
+          text-transform: capitalize;
+          &::first-letter {
+            color: #265073;
+            font-weight: 800;
+            font-size: 1.2rem;
+          }
+        }
+        .price {
+          font-weight: 800;
+        }
+      }
+      .wrapperActions {
+        width: 10%;
+        .deleteButton {
+          fill: #860a35;
+          transition: all ease-in-out 0.2s;
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+      }
+      .good {
+        color: #2d9596;
+      }
+      .medium {
+        color: #f3b664;
+      }
+      .danger {
+        color: #860a35;
+      }
+    }
+    .total {
+      font-weight: 800;
+    }
+  }
+  .empty {
+    text-align: center;
+    font-size: 1rem;
+    color: #265073;
+    font-weight: 200;
+  }
+}

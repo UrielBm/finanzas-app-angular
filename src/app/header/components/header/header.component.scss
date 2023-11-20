@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Vina Sans", sans-serif;
+  min-height: 4rem;
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #2d9596;
+  }
+}

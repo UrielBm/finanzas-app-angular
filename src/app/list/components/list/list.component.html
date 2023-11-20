@@ -1,0 +1,24 @@
+<section class="wrapperList">
+<h2 class="title">¡lista de gastos!</h2>
+<div *ngIf="list.length > 0; else isEmpty">
+  <ol class="list">
+    <li class="listItem" *ngFor="let item of list; index as i">
+    <span class="index">{{i + 1}}.</span>
+    <div class="wrapperData">
+      <p class="descr">{{item.description}}</p>
+      <p class="price" [ngClass]="item.price < 500  ? 'good' : item.price >= 500 && item.price < 1000 ? 'medium':'danger'">${{item.price}}</p>
+    </div>
+    <div class="wrapperActions">
+      <svg class="deleteButton"  clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" width="1rem" height="1rem" xmlns="http://www.w3.org/2000/svg" (click)="onSetDeleteItem(item.id)"><path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/></svg>
+    </div>
+    </li>
+    <div>
+      <p>Número de gatos: <span class="total">{{total.count}}</span></p>
+      <p>Total de gastos: <span class="total">$</span> <span class="total">{{total.total}}</span></p>
+    </div>
+  </ol>
+</div>
+<ng-template #isEmpty>
+  <p class="empty">Aun no hay ningun gasto</p>
+</ng-template>
+</section>
